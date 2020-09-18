@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
-<html lang="en">
-    <div>Test!</div>
-    <div id="aap-card"></div>
+<head>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+    <body lang="en">
+        <div>Test!</div>
+        <div id="aap-card"></div>
 
-    <script src="./src/card.js"></script>
-    <script>
-        cardInit()
-    </script>
+        <script src="./src/card.js"></script>
+        <script src="./src/client/fetch.js"></script>
+        <script>
+            cardInit()
+            fetchIds()
+        </script>
+    </body>
 </html>
