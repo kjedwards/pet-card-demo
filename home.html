@@ -7,12 +7,40 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </head>
     <body lang="en">
-        <div class="wrapper" x-data="createPetFetcher()" x-init="() => {initialize()}">
-            <template x-for="pet in data.pets" :key="pet.pet_id">
-                <div class="aap-card w-full md:w-1/3 lg:w-1/3 xl:w-1/3 max-w-md">
-                    <div class="aap-pet-card">Second test</div>
-                </div>
-            </template>
+        <div class="wrapper m-4 md:m-16 lg:m-24 xl:m-32" x-data="createPetFetcher()" x-init="() => {initialize()}">
+            <div id="pet-list-wrapper" class="w-full flex flex-row flex-wrap">
+                <template x-for="pet in data.pets" :key="pet.pet_id">
+                    <div class="aap-card w-full md:w-1/3 lg:w-1/3 xl:w-1/3 xl:max-w-md">
+                        <div class="aap-pet-card flex flex-row md:flex-col lg:flex-col xl:flex-col m-3">
+                            <img :src="pet.large_results_photo_url" class="w-full" />
+                            <div class="flex flex-col mx-4 my-2">
+                                <h1 x-text="pet.pet_name" class="text-blue font-bold font text-2xl"></h1>
+                                <div class="flex flex-row">
+                                    <h2 x-text="pet.primary_breed" class="font-bold"></h2>
+                                    <div x-show="pet.secondary_breed" class="flex flex-row">
+                                        <h2 class="font-bold">/</h2>
+                                        <h2 x-text="pet.secondary_breed" class="font-bold"></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col m-4 h-16">
+                                <div class="flex flex-row">
+                                    <span x-show="pet.sex" x-text="pet.sex"></span>
+                                    <span x-show="pet.age" class="mr-1">,</span>
+                                    <span x-show="pet.age" x-text="pet.age"></span>
+                                    <span x-show="pet.special_needs === 1" class="mr-1">,</span>
+                                    <span x-show="pet.special_needs === 1" class="text-coral">Special needs</span>
+                                </div>
+                                <div class="flex flex-row">
+                                    <span x-text="pet.city"></span>
+                                    <span x-show="pet.state" class="mr-1">,</span>
+                                    <span x-text="pet.state"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
         </div>
 
         <script src="./src/client/fetch.js"></script>

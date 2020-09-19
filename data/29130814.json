@@ -1,1 +1,23 @@
-{"pet":{"automap":0,"addr_state_code":"MN","sex":"Male","purebred":0,"primary_breed":"Domestic Longhair","age":"Adult","pet_details_url":"https://www.adoptapet.com/pet/29130814-minneapolis-minnesota-cat","act_quickly":0,"hair_length":"Long","video_url":null,"images":[{"thumbnail_url":"https://pet-uploads.adoptapet.com/4/7/f/497806345.jpg","thumbnail_height":123,"thumbnail_width":125,"original_width":334,"original_height":329,"original_url":"https://pet-uploads.adoptapet.com/0/f/9/497806343.jpg"}],"color":"Black & White Or Tuxedo","pet_name":"Felix","secondary_breed":null,"species":"Cat","pet_code":"1858033","last_modified":"2020-08-21T10:12:34","size":null,"pet_id":29130814,"special_needs":0,"addr_city":"Minneapolis"},"status":"ok"}
+{"pet":
+{"automap":0,
+  "addr_state_code":"MN",
+  "sex":"Male",
+  "purebred":0,
+  "primary_breed":"Domestic Longhair",
+  "age":"Adult",
+  "pet_details_url":"https://www.adoptapet.com/pet/29130814-minneapolis-minnesota-cat",
+  "act_quickly":0,
+  "hair_length":"Long",
+  "video_url":null,
+  "images":[{"thumbnail_url":"https://pet-uploads.adoptapet.com/4/7/f/497806345.jpg","thumbnail_height":123,"thumbnail_width":125,"original_width":334,"original_height":329,"original_url":"https://pet-uploads.adoptapet.com/0/f/9/497806343.jpg"}],
+  "color":"Black & White Or Tuxedo",
+  "pet_name":"Felix",
+  "secondary_breed": "Cat",
+  "species":"Cat",
+  "pet_code":"1858033",
+  "last_modified":"2020-08-21T10:12:34",
+  "size":null,"pet_id":29130814,
+  "special_needs":0,
+  "addr_city":"Minneapolis",
+  "adopted": 1
+},"status":"ok"}
