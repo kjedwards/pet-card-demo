@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .aap-pet-card {
+        background: white;
+        border-radius: 2px;
+        box-shadow: 0 4px 10px rgba(106,106, 106, 0.19);
+        margin-bottom: 10px;
+    }
+}

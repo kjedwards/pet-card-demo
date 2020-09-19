@@ -1,6 +1,9 @@
 const cardInit = () => {
     const cardHtml = `
-        <div>Second test</div>
+        <div class="aap-pet-card">Second test</div>
     `
-    document.getElementById("aap-card").innerHTML = cardHtml;
+    const cards = document.getElementsByClassName("aap-card")
+        Array.prototype.filter.call(cards, card => {
+        card.innerHTML = cardHtml;
+    })
 }
