@@ -27,15 +27,40 @@
                     <div class="aap-card w-full md:w-1/3 lg:w-1/3 xl:w-1/3 xl:max-w-md relative">
                         <div class="aap-pet-card flex flex-row md:flex-col lg:flex-col xl:flex-col m-3 h-32 md:h-auto lg:h-auto xl:h-auto relative">
                             <div x-show="pet.showInfo" class="w-full h-full bg-darkBlue absolute top-0 left-0 z-20 flex flex-col">
-                                <div class="flex justify-end m-6">
-                                    <i @click="toggleShowInfoOff(pet)" class="fas fa-times text-white text-2xl"></i>
+                                <div class="relative">
+                                    <i @click="toggleShowInfoOff(pet)" class="fas fa-times text-white text-2xl absolute top-0 right-0 p-4"></i>
                                 </div>
-                                <div class="flex flex-col text-white mx-8 mb-8">
-                                    <div class="flex flex-row">
-                                        <div class="w-1/4 font-bold">Color</div>
-                                        <div x-text="pet.color" class="w-3/4"></div>
+                                <div class="flex flex-col text-white m-2 md:m-2 md:mt-8 lg:m-8 xl:m-8">
+                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                        <span class="w-1/3 font-bold">Color</span>
+                                        <span x-show="pet.color" x-text="pet.color" class="w-2/3 cutoff-lines"></span>
+                                        <span x-show="!pet.color" class="w-2/3">Not specified</span>
                                     </div>
-
+                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                        <span class="w-1/3 font-bold">Size</span>
+                                        <span x-show="pet.size" x-text="pet.size" class="w-2/3"></span>
+                                        <span x-show="!pet.size" class="w-2/3">Not specified</span>
+                                    </div>
+                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                        <span class="w-1/3 font-bold">Details</span>
+                                        <div x-show="pet.details" class="w-2/3 lg:flex xl:flex flex-col hidden lg:block xl:block">
+                                            <template x-for="detail in pet.details" :key="detail">
+                                                <span x-text="detail"></span>
+                                            </template>
+                                        </div>
+                                        <span x-show="!pet.details" class="w-2/3">Not specified</span>
+                                    </div>
+                                    <div class="flex flex-row mb-4">
+                                        <span class="w-1/3 font-bold hidden md:block lg:block xl:block">Story</span>
+                                        <span class="w-1/3 font-bold block md:hidden lg:hidden xl:hidden">My info</span>
+                                        <span x-show="pet.story" x-text="pet.story" class="w-2/3 cutoff-lines"></span>
+                                        <span x-show="!pet.story" class="w-2/3">Not specified</span>
+                                    </div>
+                                    <hr class="text-white opacity-50" />
+                                    <div class="flex flex-row my-6 text-white font-bold align-center">
+                                        <a :href="pet.pet_details_url">Learn More</a>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="absolute top-0 right-0 z-10 flex flex-col p-3">
@@ -56,7 +81,7 @@
                                 </div>
                                 <img :src="pet.large_results_photo_url" class="w-auto h-full md:w-full lg:w-full xl:-w-full" />
                             </div>
-                            <div class="flex flex-col w-7/12 md:w-full lg:w-full xl:w-full">
+                            <div class="flex flex-col w-7/12 md:w-full lg:w-full xl:w-full pr-5 md:pr-0 lg:pr-0 xl:pr-0">
                                 <div class="flex flex-col mx-4 my-2">
                                     <h1 x-text="pet.pet_name" class="text-blue font-bold font text-xl md:text-2xl lg:text-2xl xl:text-2xl line-height-normal"></h1>
                                     <div class="flex flex-row">
@@ -68,7 +93,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-col mx-4 my-2 h-16">
+                                <div class="flex flex-col mx-4 my-2 h-10 md:h-16 lg:h-16 xl:h-16 overflow-hidden">
                                     <div class="line-height-normal">
                                         <span x-show="pet.sex" x-text="pet.sex"></span>
                                         <span x-show="pet.age" class="mr-1 -ml-1">,</span>
@@ -76,7 +101,7 @@
                                         <span x-show="pet.special_needs === 1" class="mr-1 -ml-1">,</span>
                                         <span x-show="pet.special_needs === 1" class="text-coral">Special needs</span>
                                     </div>
-                                    <div x-show="pet.special_needs !== 1">
+                                    <div>
                                         <span x-text="pet.city"></span>
                                         <span x-show="pet.state" class="mr-1 -ml-1">,</span>
                                         <span x-text="pet.state"></span>

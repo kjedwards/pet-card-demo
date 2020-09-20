@@ -47,6 +47,7 @@ function createPetFetcher() {
                     color: petDetails.pet.color,
                     story: petDetails.pet.story,
                     details: petDetails.pet.details,
+                    pet_details_url: petDetails.pet.pet_details_url,
                     showInfo: false
                 })
             })
@@ -54,6 +55,7 @@ function createPetFetcher() {
             // Sort (map puts them in an order depending on when async finishes)
             this.data.pets.sort((a, b) => a.order > b.order)
             this.data.petsShow = this.data.pets
+            console.log('pets', this.data.petsShow)
         },
         async fetchPets() {
             const res = await fetch('data/petIds.json')

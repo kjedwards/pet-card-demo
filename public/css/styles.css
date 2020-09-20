@@ -607,6 +607,20 @@ video {
   max-width: 6rem;
 }
 
+.align-center {
+  align-items: center;
+}
+
+/* This bit is a little tricky, going to need media queries */
+
+.cutoff-lines {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
 /* Custom select css - closest I could get without a lot of JS. Tailwind would be really unruly for this */
 
 #pet-filter select,
