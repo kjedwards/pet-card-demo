@@ -603,6 +603,10 @@ video {
   line-height: normal;
 }
 
+.breed-cutoff {
+  max-width: 6rem;
+}
+
 /* Custom select css - closest I could get without a lot of JS. Tailwind would be really unruly for this */
 
 #pet-filter select,
