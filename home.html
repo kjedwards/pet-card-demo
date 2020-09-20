@@ -30,34 +30,37 @@
                                 <div class="relative">
                                     <i @click="toggleShowInfoOff(pet)" class="fas fa-times text-white text-2xl absolute top-0 right-0 p-4"></i>
                                 </div>
-                                <div class="flex flex-col text-white m-2 md:m-2 md:mt-8 lg:m-8 xl:m-8">
-                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                <div class="flex flex-col text-white text-sm m-2 md:m-2 md:mt-8 lg:m-8 xl:m-8">
+                                    <div class="flex flex-row md:mb-5 lg:mb-5 xl:mb-5">
                                         <span class="w-1/3 font-bold">Color</span>
                                         <span x-show="pet.color" x-text="pet.color" class="w-2/3 cutoff-lines"></span>
                                         <span x-show="!pet.color" class="w-2/3">Not specified</span>
                                     </div>
-                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                    <div class="flex flex-row md:mb-5 lg:mb-5 xl:mb-5">
                                         <span class="w-1/3 font-bold">Size</span>
                                         <span x-show="pet.size" x-text="pet.size" class="w-2/3"></span>
                                         <span x-show="!pet.size" class="w-2/3">Not specified</span>
                                     </div>
-                                    <div class="flex flex-row mb-1 md:mb-5 lg:mb-5 xl:mb-5">
+                                    <div class="flex flex-row md:mb-5 lg:mb-5 xl:mb-5">
                                         <span class="w-1/3 font-bold">Details</span>
                                         <div x-show="pet.details" class="w-2/3 lg:flex xl:flex flex-col hidden lg:block xl:block">
                                             <template x-for="detail in pet.details" :key="detail">
                                                 <span x-text="detail"></span>
                                             </template>
                                         </div>
+                                        <div class="w-2/3 cutoff-lines lg:hidden xl:hidden">
+                                            <span x-text="pet.detailsString"></span>
+                                        </div>
                                         <span x-show="!pet.details" class="w-2/3">Not specified</span>
                                     </div>
-                                    <div class="flex flex-row mb-4">
+                                    <div class="flex flex-row mb-1 md:mb-4 lg:mb-4 xl:mb-4">
                                         <span class="w-1/3 font-bold hidden md:block lg:block xl:block">Story</span>
                                         <span class="w-1/3 font-bold block md:hidden lg:hidden xl:hidden">My info</span>
                                         <span x-show="pet.story" x-text="pet.story" class="w-2/3 cutoff-lines"></span>
                                         <span x-show="!pet.story" class="w-2/3">Not specified</span>
                                     </div>
-                                    <hr class="text-white opacity-50" />
-                                    <div class="flex flex-row my-6 text-white font-bold align-center">
+                                    <hr class="text-white opacity-50 hidden md:block lg:block xl:block" />
+                                    <div class="flex flex-row md:my-6 lg:my-6 xl:my-6 text-white font-bold align-center">
                                         <a :href="pet.pet_details_url">Learn More</a>
                                         <i class="fas fa-angle-right"></i>
                                     </div>

@@ -47,6 +47,7 @@ function createPetFetcher() {
                     color: petDetails.pet.color,
                     story: petDetails.pet.story,
                     details: petDetails.pet.details,
+                    detailsString: petDetails.pet.details.join(' '),
                     pet_details_url: petDetails.pet.pet_details_url,
                     showInfo: false
                 })

@@ -621,6 +621,18 @@ video {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 768px) {
+  .cutoff-lines {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cutoff-lines {
+    -webkit-line-clamp: 7;
+  }
+}
+
 /* Custom select css - closest I could get without a lot of JS. Tailwind would be really unruly for this */
 
 #pet-filter select,
