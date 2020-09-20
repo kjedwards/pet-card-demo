@@ -9,6 +9,15 @@
         box-shadow: 0 4px 10px rgba(106,106, 106, 0.19);
     }
 
+    /* Couldn't find a style for these in tailwind */
+    .ellipsis {
+        text-overflow: ellipsis;
+    }
+
+    .line-height-normal {
+        line-height: normal;
+    }
+
     /* Custom select css - closest I could get without a lot of JS. Tailwind would be really unruly for this */
     #pet-filter select,
     #pet-filter select::before,
