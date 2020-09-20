@@ -11,6 +11,7 @@ function createPetFetcher() {
             allPets.pets.map(async pet => {
                 const petDetails = await this.fetchPet(pet.pet_id)
                 this.data.pets.push({
+                    order: pet.order,
                     pet_id: pet.pet_id,
                     pet_name: pet.pet_name,
                     large_results_photo_url: pet.large_results_photo_url,
@@ -25,6 +26,9 @@ function createPetFetcher() {
                     adopted: petDetails.pet.adopted
                 })
             })
+
+            // Sort (map puts them in an order depending on when async finishes)
+            this.data.pets.sort((a, b) => a.order > b.order)
         },
         async fetchPets() {
             const res = await fetch('data/petIds.json')
