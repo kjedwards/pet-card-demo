@@ -1,1 +1,25 @@
-{"pet":{"last_modified":"2020-08-24T17:14:43","video_url":null,"images":[{"original_width":247,"original_height":329,"thumbnail_width":125,"thumbnail_url":"https://pet-uploads.adoptapet.com/e/3/e/498409024.jpg","original_url":"https://pet-uploads.adoptapet.com/2/f/2/498409022.jpg","thumbnail_height":167}],"age":"Young","addr_city":"Minneapolis","pet_name":"Shumo","purebred":0,"color":"Black & White Or Tuxedo","act_quickly":1,"addr_state_code":"MN","primary_breed":"Domestic Mediumhair","size":null,"pet_details_url":"https://www.adoptapet.com/pet/29158352-minneapolis-minnesota-cat","species":"Cat","secondary_breed":null,"automap":0,"hair_length":"Medium","sex":"Female","special_needs":0,"pet_code":"1865639","pet_id":29158352, "adopted": 0},"status":"ok"}
+{"pet":
+{"last_modified":"2020-08-24T17:14:43",
+  "video_url":null,
+  "images":[{"original_width":247,"original_height":329,"thumbnail_width":125,"thumbnail_url":"https://pet-uploads.adoptapet.com/e/3/e/498409024.jpg","original_url":"https://pet-uploads.adoptapet.com/2/f/2/498409022.jpg","thumbnail_height":167}],
+  "age":"Young",
+  "addr_city":"Minneapolis",
+  "pet_name":"Shumo",
+  "purebred":0,"color":"Black & White Or Tuxedo",
+  "act_quickly":1,
+  "addr_state_code":"MN",
+  "primary_breed":"Domestic Mediumhair",
+  "size":null,
+  "pet_details_url":"https://www.adoptapet.com/pet/29158352-minneapolis-minnesota-cat",
+  "species":"Cat",
+  "secondary_breed":null,
+  "automap":0,
+  "hair_length":"Medium",
+  "sex":"Female",
+  "special_needs":0,
+  "pet_code":"1865639",
+  "pet_id":29158352,
+  "adopted": 0,
+  "story": "Hi! We have been hosting two sweet cats for a friend of our family as his family was looking for a new place to live. Unfortunately, they cannot have pets in their new home.\n\nThe cats are very sweet and are staying with our girls in their room. Unfortunately, they do not get along with our existing pets.\n\nOur friend has agreed that this is the best solution for the cats.\n\nFeel free to reach out with any questions.",
+  "details": ["House-trained", "Good with Cats", "Good with Dogs"]
+},"status":"ok"}

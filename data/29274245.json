@@ -1,1 +1,29 @@
-{"status":"ok","pet":{"pet_code":"1895362","special_needs":1,"sex":"Female","hair_length":"Short","secondary_breed":null,"automap":0,"pet_id":29274245,"primary_breed":"Calico","species":"Cat","pet_details_url":"https://www.adoptapet.com/pet/29274245-minneapolis-minnesota-cat","size":null,"act_quickly":0,"color":"Brown Or Chocolate","addr_state_code":"MN","age":"Senior","images":[{"thumbnail_height":157,"original_url":"https://pet-uploads.adoptapet.com/5/3/c/500915784.jpg","original_height":329,"thumbnail_width":125,"original_width":263,"thumbnail_url":"https://pet-uploads.adoptapet.com/5/f/4/500915786.jpg"}],"video_url":null,"last_modified":"2020-09-09T06:55:59","purebred":0,"pet_name":"Lolo","addr_city":"Minneapolis", "adopted": 0}}
+{"status":"ok",
+  "pet":
+  {
+    "pet_code":"1895362",
+    "special_needs":1,
+    "sex":"Female",
+    "hair_length":"Short",
+    "secondary_breed":null,
+    "automap":0,
+    "pet_id":29274245,
+    "primary_breed":"Calico",
+    "species":"Cat",
+    "pet_details_url":"https://www.adoptapet.com/pet/29274245-minneapolis-minnesota-cat",
+    "size":null,
+    "act_quickly":0,
+    "color":"Brown Or Chocolate",
+    "addr_state_code":"MN",
+    "age":"Senior",
+    "images":[{"thumbnail_height":157,"original_url":"https://pet-uploads.adoptapet.com/5/3/c/500915784.jpg","original_height":329,"thumbnail_width":125,"original_width":263,"thumbnail_url":"https://pet-uploads.adoptapet.com/5/f/4/500915786.jpg"}],
+    "video_url":null,
+    "last_modified":"2020-09-09T06:55:59",
+    "purebred":0,
+    "pet_name":"Lolo",
+    "addr_city":"Minneapolis",
+    "adopted": 0,
+    "story": "My Cat is approximately 12 years old. She would do well with a gentle female owner. She is scared of men. She mostly keeps to herself but is very affectionate when you let her come to you.",
+    "details": ["House-Trained", "Spayed", "Good with Kids", "Not Good with Cats"]
+  }
+}

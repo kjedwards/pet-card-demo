@@ -44,6 +44,9 @@ function createPetFetcher() {
                     special_needs: petDetails.pet.special_needs,
                     act_quickly: petDetails.pet.act_quickly,
                     adopted: petDetails.pet.adopted,
+                    color: petDetails.pet.color,
+                    story: petDetails.pet.story,
+                    details: petDetails.pet.details,
                     showInfo: false
                 })
             })
@@ -74,6 +77,12 @@ function createPetFetcher() {
         resetFilter() {
             this.data.filter.selected = "";
             this.data.petsShow = this.data.pets;
+        },
+        toggleShowInfoOn(pet) {
+            pet.showInfo = true
+        },
+        toggleShowInfoOff(pet) {
+            pet.showInfo = false
         }
     }
 }

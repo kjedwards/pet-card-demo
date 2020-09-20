@@ -12,12 +12,15 @@
   "images":[{"thumbnail_url":"https://pet-uploads.adoptapet.com/4/7/f/497806345.jpg","thumbnail_height":123,"thumbnail_width":125,"original_width":334,"original_height":329,"original_url":"https://pet-uploads.adoptapet.com/0/f/9/497806343.jpg"}],
   "color":"Black & White Or Tuxedo",
   "pet_name":"Felix",
-  "secondary_breed": null,
+  "secondary_breed": "Cat",
   "species":"Cat",
   "pet_code":"1858033",
   "last_modified":"2020-08-21T10:12:34",
-  "size":null,"pet_id":29130814,
+  "size":null,
+  "pet_id":29130814,
   "special_needs":0,
   "addr_city":"Minneapolis",
-  "adopted": 1
+  "adopted": 1,
+  "story": "Felix is friendly, chill and happy. He loves being around people but also enjoys long naps by himself. He is small but mighty—weighing in at only 7 pounds. Felix loves to be held which is proven by his extra loud purr. He is also quite the athlete. I've never seen a cat jump so high! The perfect home for Felix would be one without other cats.",
+  "details": ["Neutered", "Not Good with Cats", "Good with Dogs"]
 },"status":"ok"}
