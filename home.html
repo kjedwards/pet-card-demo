@@ -9,8 +9,20 @@
     </head>
     <body lang="en">
         <div class="wrapper m-4 md:m-16 lg:m-24 xl:m-32" x-data="createPetFetcher()" x-init="() => {initialize()}">
+            <div class="flex flex-row">
+                <div id="pet-filter" class="m-3">
+                    <select x-model="data.filter.selected" x-on:change="filterPets()">
+                        <option value="" selected hidden>Filter</option>
+                        <template x-for="option in data.filter.options">
+                            <option :key="option.value" :value="option.value" x-text="option.label"></option>
+                        </template>
+                    </select>
+                    <span class="filter-focus"></span>
+                </div>
+                <button @click="resetFilter()" class="text-blue">Reset Filter</button>
+            </div>
             <div id="pet-list-wrapper" class="w-full flex flex-row flex-wrap">
-                <template x-for="pet in data.pets" :key="pet.pet_id">
+                <template x-for="pet in data.petsShow" :key="pet.pet_id">
                     <div class="aap-card w-full md:w-1/3 lg:w-1/3 xl:w-1/3 xl:max-w-md">
                         <div class="aap-pet-card flex flex-row md:flex-col lg:flex-col xl:flex-col m-3">
                             <div class="w-full relative">

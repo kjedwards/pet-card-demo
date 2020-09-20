@@ -2,7 +2,27 @@
 // was over. So, I copied the insomnia response into JSON files to simulate "calls"
 function createPetFetcher() {
     return {
-        data: { pets: [] },
+        data: {
+            pets: [],
+            petsShow: [],
+            filter: {
+                selected: "",
+                options: [
+                    {
+                        label: "Act Quickly",
+                        value: "act_quickly"
+                    },
+                    {
+                        label: "Special Needs",
+                        value: "special_needs"
+                    },
+                    {
+                        label: "Adopted",
+                        value: "adopted"
+                    },
+                ]
+            }
+        },
         async initialize() {
             // Get all pets
             const allPets = await this.fetchPets()
@@ -23,12 +43,14 @@ function createPetFetcher() {
                     age: petDetails.pet.age,
                     special_needs: petDetails.pet.special_needs,
                     act_quickly: petDetails.pet.act_quickly,
-                    adopted: petDetails.pet.adopted
+                    adopted: petDetails.pet.adopted,
+                    showInfo: false
                 })
             })
 
             // Sort (map puts them in an order depending on when async finishes)
             this.data.pets.sort((a, b) => a.order > b.order)
+            this.data.petsShow = this.data.pets
         },
         async fetchPets() {
             const res = await fetch('data/petIds.json')
@@ -43,6 +65,15 @@ function createPetFetcher() {
                 throw new Error('ERROR')
             }
             return await res.json()
+        },
+        filterPets() {
+            this.data.petsShow = this.data.pets.filter((pet) => {
+                return pet[this.data.filter.selected] === 1
+            })
+        },
+        resetFilter() {
+            this.data.filter.selected = "";
+            this.data.petsShow = this.data.pets;
         }
     }
 }

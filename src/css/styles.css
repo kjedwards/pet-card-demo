@@ -3,10 +3,60 @@
 @tailwind utilities;
 
 @layer base {
+    /* Custom drop shadow for the cards  */
     .aap-pet-card {
-        background: white;
         border-radius: 2px;
         box-shadow: 0 4px 10px rgba(106,106, 106, 0.19);
-        margin-bottom: 10px;
+    }
+
+    /* Custom select css - closest I could get without a lot of JS. Tailwind would be really unruly for this */
+    #pet-filter select,
+    #pet-filter select::before,
+    #pet-filter select::after {
+        box-sizing: border-box;
+    }
+
+    #pet-filter select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+    }
+
+    #pet-filter {
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+        width: 100%;
+        min-width: 15ch;
+        max-width: 30ch;
+        border: 1px solid #838383;
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1;
+        background-color: #fff;
+        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    }
+
+    select,
+    #pet-filter:after {
+        grid-area: select;
+    }
+
+    #pet-filter::after {
+        content: "";
+        width: 0.8em;
+        height: 0.5em;
+        background-color: #777;
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        justify-self: end;
     }
 }
