@@ -629,6 +629,12 @@ video {
 
 @media only screen and (min-width: 1024px) {
   .cutoff-lines {
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cutoff-lines {
     -webkit-line-clamp: 7;
   }
 }
